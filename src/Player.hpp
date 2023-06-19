@@ -11,6 +11,10 @@ private:
     bool shield_power;
 
 public:
+    bool get_shield();
+    bool get_bullet_power();
+    void set_bullet_power(bool mode);
+    void set_shield_power(bool mode);
     void draw(Window *window);
     void handle_key_press(char key);
     void handle_key_release(char key);
@@ -18,10 +22,6 @@ public:
     void update(Window *window);
     Bullet shoot();
     Player() = default;
-    bool get_shield();
-    bool get_bullet_power();
-    void set_bullet_power(bool mode);
-    void set_shield_power(bool mode);
 };
 
 #endif

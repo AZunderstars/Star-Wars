@@ -1,5 +1,13 @@
 #include "Player.hpp"
 
+bool Player::get_shield() { return shield_power; }
+
+bool Player::get_bullet_power() { return bullet_power; }
+
+void Player::set_bullet_power(bool mode) { bullet_power = mode; }
+
+void Player::set_shield_power(bool mode) { shield_power = mode; }
+
 void Player::draw(Window *window)
 {
     window->draw_img(PLAYER_IMAGE, Rectangle(location, width, height));
@@ -61,22 +69,4 @@ Bullet Player::shoot()
         return Bullet(starting_point, BULLET_UP);
     else
         return Bullet(starting_point, BULLET_UP * BULLET_INCREASE_RATE);
-}
-
-bool Player::get_shield()
-{
-    return shield_power;
-}
-
-bool Player::get_bullet_power(){
-    return bullet_power;
-}
-
-void Player::set_bullet_power(bool mode)
-{
-    bullet_power = mode;
-}
-void Player::set_shield_power(bool mode)
-{
-    shield_power = mode;
 }

@@ -1,9 +1,6 @@
 #include "Power.hpp"
 
-int Power::get_mode()
-{
-    return mode;
-}
+int Power::get_mode() { return mode; }
 
 Power::Power(Point starting_location, int _mode)
 {

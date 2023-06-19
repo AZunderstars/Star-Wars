@@ -11,6 +11,7 @@ public:
     virtual Bullet shoot();
     virtual bool does_shoot();
     virtual void update(Window *window){};
+
 protected:
     int shoot_counter = 0;
 };
